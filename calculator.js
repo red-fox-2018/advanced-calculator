@@ -41,11 +41,5 @@ class Calculator {
 
 // module.exports = Calculator
 var calculator = new Calculator(0)
-let result = calculator
-  .add(2)
-  .add(4)
-  .multiply(2)
-  .square(2)
-  .squareRoot()
-  .total
+let result = calculator.add(2).add(4).multiply(2).square(2).squareRoot().total
 console.log(result)
