@@ -25,8 +25,8 @@ class Calculator {
     this.total = Math.pow(this.total,num)
     return this
   }
-  squareRoot (num) {
-    this.total = Math.sqrt(num)
+  squareRoot () {
+    this.total = Math.sqrt(this.total)
     return this
   }
 }
@@ -46,6 +46,6 @@ let result = calculator
   .add(4)
   .multiply(2)
   .square(2)
-  .squareRoot(2)
+  .squareRoot()
   .total
 console.log(result)
