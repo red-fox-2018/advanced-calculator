@@ -3,20 +3,45 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.result = 0
   }
-  add () {
+
+  add (num) {
+    
+    this.result += num
+    return this
   }
-  substract () {
+  substract (num) {
+
+    this.result -=  num
+    return this
   }
-  multiply () {
+  multiply (num) {
+
+    this.result *= num
+    return this
   }
-  divide () {
+  divide (num) {
+
+    this.result /= num
+    return this
   }
-  square () {
+  square (num) {
+
+    this.result = Math.pow(this.result, num)
+    return this
   }
-  squareRoot () {
+  squareRoot (num) {
+
+    this.result = Math.round(Math.sqrt(num))
+    return this
   }
 }
+
+let calculator = new Calculator();
+
+console.log(calculator.add(5).divide(1).multiply(10).square(2).squareRoot(2));
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
