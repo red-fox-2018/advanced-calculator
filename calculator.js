@@ -1,21 +1,65 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor(num) {
+  this.num = num
   }
-  add () {
+  init(num){
+    this.num = num
+    return this
   }
-  substract () {
+  add(addnum) {
+    this.num+=addnum;
+    return this
   }
-  multiply () {
+
+  substract(subNum) {
+    this.num-=subNum
+    return this
   }
-  divide () {
+
+  multiply(mulNum) {
+    this.num*=mulNum
+    return this
   }
-  square () {
+
+  divide(divNum) {
+    this.num/=divNum
+    return this
   }
-  squareRoot () {
+
+  square(sqNum) {
+  this.num = Math.pow(this.num,sqNum)
+    return this
   }
+
+  squareRoot(sqrNum) {
+    this.num = sqrNum
+    this.num = Math.sqrt(this.num)
+    return this
+  }
+
+  wideCircle(cirFingerNum){
+  this.num = cirFingerNum
+   if (this.num % 7 === 0) {
+     this.num = (22 / 7) * this.num * this.num;
+   } else {
+     this.num = 3.14 * this.num * this.num;
+   }
+   return this
+  }
+
+  cumCircle(cirFingerNum){
+    this.num = cirFingerNum
+    if (this.num % 7 === 0) {
+      this.num = (22 / 7) * this.num * 2;
+    } else {
+      this.num = 3.14 * this.num * 2;
+    }
+    return this
+
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
