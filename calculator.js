@@ -3,20 +3,41 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.result = 1;
   }
-  add () {
+  add (num) {
+    this.result += num;
+    return this;
   }
-  substract () {
+  substract (num) {
+    this.result -= num;
+    return this;
   }
-  multiply () {
+  multiply (num) {
+    this.result *= num;
+    return this;
   }
-  divide () {
+  divide (num) {
+    this.result /= num;
+    return this;
   }
-  square () {
+  square (num) {
+    this.result = Math.pow(this.result, num)
+    return this;
   }
-  squareRoot () {
+  squareRoot (num) {
+    this.result = Math.pow(this.result, 1/num);
+    return this;
   }
 }
+
+const calc = new Calculator()
+const pi = 3.14;
+const r = 3
+const luasLingkaran = calc.multiply(r).square(2).multiply(pi);
+// const kelilingLingkaran = calc.multiply(2).multiply(pi).multiply(r)
+console.log(`luas lingkaran dengan jari-jari ${r} adalah ${luasLingkaran.result}`);
+// console.log(calc[data]);
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
