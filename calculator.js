@@ -43,6 +43,11 @@ let key = Object.keys(calculator);
 let result = calculator.add(8).substract(2).divide(2).square().squareRoot();
 console.log('result: 4 equal with', result[key]);
 
+// input jari-jari
+let luasLingkaran = new Calculator(7);
+console.log('# Luas lingkaran');
+let luasLing = luasLingkaran.square().multiply(Math.PI)
+console.log(luasLing[key]);
 
 let calc = new Calculator();
 let data = Object.keys(calc);
