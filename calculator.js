@@ -48,9 +48,19 @@ class Calculator {
 
 }
 
-let calculate = new Calculator(2);
-let total = calculate.cicleSize(20).total
-console.log(total)
+let calculate = new Calculator(1);
+let total = calculate.add(1).substract(1).multiply(4).divide(1).total
+console.log("Penjumlahan, Pengurangan, Perkalian, Pembagian ",total)
+
+let akar = calculate.square(2).total
+console.log("Akar ",akar)
+
+let akarpangkat = calculate.squareRoot().total
+console.log("Akar Pangkat ",akarpangkat)
+
+let kelilingLingkaran = calculate.cicleRound(20).total
+let luaslingkaran = calculate.cicleSize(20).total
+console.log("Keliling Lingkaran ", kelilingLingkaran +" "+ "Luas Lingkaran ", luaslingkaran)
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
