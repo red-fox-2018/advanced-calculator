@@ -2,20 +2,46 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (angka1) {
+    this.angka1 = angka1
+    // this.penjumlahan = angka1+angka2
   }
-  add () {
+  init(angkaInput){
+    this.angka1 = angkaInput
+    return this
   }
-  substract () {
+
+  add (addAngka) {
+    this.angka1 += addAngka
+    return this
   }
-  multiply () {
+  substract (substractAngka) {
+    this.angka1 -= substractAngka
+    return this
   }
-  divide () {
+  multiply (multiplyAngka) {
+    this.angka1 *= multiplyAngka
+    return this
   }
-  square () {
+  divide (devideAngka) {
+    this.angka1 /= devideAngka
+    return this
   }
-  squareRoot () {
+  square (angkaPangkat) {
+    // this.angka1 = angkaPangkat
+    this.angka1 = Math.pow(this.angka1,angkaPangkat)
+    return this
   }
+  squareRoot (angkaAkar) {
+    this.angka1 = Math.sqrt(this.angka1, angkaAkar)
+    return this
+  }
+  kelilingLingkarang(jarijari){
+    this.angka1 = jarijari
+    this.angka1 = 3.14 * (jarijari * jarijari)
+    return this
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
