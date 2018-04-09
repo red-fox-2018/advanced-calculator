@@ -2,19 +2,32 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num) {
+    this.number = num
   }
-  add () {
+  add (num) {
+    this.number += num;
+    return this;
   }
-  substract () {
+  substract (num) {
+    this.number -= num;
+    return this;
   }
-  multiply () {
+  multiply (num) {
+    this.number *= num;
+    return this;
   }
-  divide () {
+  divide (num) {
+    this.number /= num;
+    return this;
   }
-  square () {
+  square (num) {
+    this.number = Math.pow(this.number, num);
+    return this;
   }
-  squareRoot () {
+  squareRoot (num) {
+    this.number = Math.pow(this.number, 1/num)
+    return this;
   }
 }
 
@@ -25,5 +38,16 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+var calculator = new Calculator(25);
+var result = calculator.squareRoot(2).add(5).number;
+
+
+console.log(result);
+
+
+
+
+
 
 module.exports = Calculator
