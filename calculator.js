@@ -1,21 +1,53 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+
+  constructor (num) {
+    this.number = num;
+    this.phi = 3.14;
   }
-  add () {
+
+  add (num) {
+    this.number = this.number + num;
+    return this;
   }
-  substract () {
+
+  substract (num) {
+    this.number = this.number - num;
+    return this;
   }
-  multiply () {
+
+  multiply (num) {
+    this.number = this.number * num;
+    return this;
   }
-  divide () {
+
+  divide (num) {
+    this.number = this.number1 / num;
+    return this;
   }
-  square () {
+
+  square (pow) {
+    this.number = Math.pow(this.number,pow);
+    return this;
   }
+
   squareRoot () {
+    this.number = Math.sqrt(this.number)
+    return this;
   }
+
+  circlearea(){
+    let rsquare = Math.pow(this.number,2)
+    this.number = this.phi * rsquare;
+    return this;
+  }
+
+  circlearound(){
+    this.number = 2 * this.phi * this.number;
+    return this;
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -25,5 +57,9 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+let calculator = new Calculator(5);
+let result =  calculator.square().number;
+console.log(result);
 
 module.exports = Calculator
