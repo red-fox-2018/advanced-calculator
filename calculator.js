@@ -1,20 +1,28 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor (param1,param2) {
+    this.param1 = param1;
+    this.param2 = param2;
+    this.pi = 3.14;
   }
-  add () {
+  add (param1,param2) {
+    return param1 += param2;
   }
-  substract () {
+  substract (param1,param2) {
+    return param1 -= param2;
   }
-  multiply () {
+  multiply (param1,param2) {
+    return param1 -= param2;
   }
-  divide () {
+  divide (param1,param2) {
+    return param1 /= param2;
   }
-  square () {
+  square (param1,param2) {
+    Math.pow(param1,param2);
   }
-  squareRoot () {
+  squareRoot (param1) {
+    Math.sqrt(param1);
   }
 }
 
