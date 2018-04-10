@@ -1,9 +1,11 @@
-const assert = require('assert')
+/* jshint esversion:6*/
 
-const { Calculator } = require('./calculator.js')
+const assert = require('assert');
+
+const { Calculator } = require('./calculator.js');
 
 describe('Test features', () => {
-  const calc = new Calculator()
+  const calc = new Calculator(5,5)
   const data = Object.keys(calc)
   it('should have default value for variable', () => {
     assert.deepEqual(calc[data], 1)
